@@ -98,3 +98,23 @@ const calculateBmi = (e) =>{
 calculateForm.addEventListener('submit', calculateBmi)
 
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+        contactMessage = document.getElementById('contact-message'),
+        contactUser = document.getElementById('contact-user')
+
+const sendEmail = (e) => {
+    e.preventDefault()
+
+    if(contactUser.value === ''){
+        contactMessage.classList.remove('color-green')
+        contactMessage.classList.add('color-red')
+
+        contactMessage.textContent = 'You must enter an email 👆 '
+        
+        setTimeout(() => {
+           contactMessage.textContent = '' 
+        }, 3000);
+    }
+}
+
+contactForm.addEventListener('submit', sendEmail )
