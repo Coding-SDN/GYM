@@ -164,7 +164,8 @@ const sendEmail = (e) => {
         }, (error) =>{
             // alert('OOPS! SOMETHING WENT WRONG... ☠️ ', error)
             contactMessage.classList.add('color-red')
-            contactMessage.textContent = 'OOPS! SOMETHING WENT WRONG... ☠️ '
+            // contactMessage.textContent = 'OOPS! SOMETHING WENT WRONG... ☠️ TRY AGAIN IN A FEW SECONDS '
+                contactMessage.innerHTML = `OOPS! SOMETHING WENT WRONG... ☠️ <br> TRY AGAIN IN A FEW SECONDS ⏰ `
 
             setTimeout(() => {
                contactMessage.textContent = '' 
