@@ -117,11 +117,14 @@ const calculateBmi = (e) =>{
                 calculateMessage.classList.add('color-green')
                 calculateMessage.textContent = `Your BMI is ${bmi} and you're healthy 😃 `
             }else if(bmi < 29.9){
-                calculateMessage.classList.add('color-orange')
+                calculateMessage.classList.add('color-yellow')
                 calculateMessage.textContent = `Your BMI is ${bmi} and you're overweight 😞 `
+            }else if(bmi < 34.9){
+                calculateMessage.classList.add('color-orange')
+                calculateMessage.textContent = `Your BMI is ${bmi} and you're obese 😨 `
             }else{
                 calculateMessage.classList.add('color-red')
-                calculateMessage.textContent = `Your BMI is ${bmi} and you're obese 🥵 `
+                calculateMessage.textContent = `Your BMI is ${bmi} and you're exetremely obese 🥵 `
             }
 
             calculateCm.value = ''
@@ -153,7 +156,7 @@ const sendEmail = (e) => {
            contactMessage.textContent = '' 
         }, 3000);
     } else{
-        emailjs.sendForm('service_0dj4xzc', 'template_q5hgvq5', '#contact-form', '3Za3SzlUeCu7duEi-')
+        emailjs.sendForm('service_0dj4xz', 'template_q5hgvq5', '#contact-form', '3Za3SzlUeCu7duEi-')
         .then(() =>{
             contactMessage.classList.add('color-green')
             contactMessage.textContent = 'You registered successfully 👍 '

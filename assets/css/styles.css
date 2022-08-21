@@ -158,19 +158,30 @@ img {
 }
 
 .color-blue{
-  color: hsla(196, 71%, 45%, 1);
+  /* color: hsla(192, 45%, 41%, 1); */
+  color: hsl(205, 50%, 69%);
 }
 
 .color-green {
   color: var(--first-color);
+  /* color: hsla(174, 62%, 48%, 1); */
+  /* color: hsl(138, 62%, 48%); */
+}
+
+.color-yellow{
+  /* color: hsla(47, 89%, 59%, 1); */
+  color: hsla(47, 89%, 59%, 1);
 }
 
 .color-orange{
-  color: rgb(236, 111, 58);
+  /* color: rgb(236, 111, 58); */
+  /* color: hsla(6, 81%, 77%, 1); */
+  color: hsl(27, 71%, 55%);
 }
 
 .color-red {
-  color: hsl(0, 80%, 64%);
+  color: hsla(0, 61%, 56%, 1);
+  /* color: hsl(0, 56%, 47%); */
 }
 
 /*=============== HEADER & NAV ===============*/
